@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style type="text/css">
+        ul li {list-style-type: none}
+    </style>
+</head>
+<body>
+
+<form style="border: black" th:action="@{/user/addUser}" method="post">
+    <ul>
+        <li>name:
+        <li><input type="text" name="user_name">
+        <li>phone:
+        <li><input type="text" name="phone_number">
+        <li>address:
+        <li><input type="text" name="address">
+        <li><input type="submit" value="确认">
+        <li><input type="button" value="取消" onclick="window.location.href='/user/selectAllUser'">
+    </ul>
+</form>
+</body>
+</html>

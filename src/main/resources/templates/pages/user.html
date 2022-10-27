@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<a href="#" th:href="@{/user/insertUser}">添加</a>
+<form style="border: rebeccapurple" th:action="@{/user/selectBySingleInfo}">
+    <ul>
+        <li>name:
+        <li><input type="text" name="userName" >
+        <li><input type="submit" value="Search">
+    </ul>
+</form>
+
+<table style="border: aqua">
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>电话</th>
+        <th>地址</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user:${users}">
+        <td th:text="${user.user_name}">MySQL</td>
+        <td th:text="${user.phone_number}">RDBMS</td>
+        <td th:text="${user.address}"></td>
+        <td><a href="#" th:href="@{/user/findUserForDelete(id=${user.id})}">删除</a></td>
+        <td><a href="#" th:href="@{/user/findUser(id=${user.id})}">修改</a>
+    </tr>
+    </tbody>
+</table>
+</table>
+</body>
+</html>
