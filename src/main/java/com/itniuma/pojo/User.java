@@ -6,19 +6,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Data
-@Table(name="mail_line")
+@Table(name="connect")
 public class User {
     @Id
     private Integer id;
-    private String user_name;
-    private String phone_number;
+    private String name;
+    private String phone;
     private String address;
 
-    public User(){}
-    public User(Integer id, String userName, String phoneNumber, String address) {
-        this.address=address;
-        this.id=id;
-        this.user_name=userName;
-        this.phone_number=phoneNumber;
+    public User(Integer id, String name, String phone, String address) {
+        this.id = null;
+        this.name = name;
+        this.phone = phone;
+        this.address = address;
     }
+    public User(){}
 }

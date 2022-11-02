@@ -7,22 +7,22 @@ import java.util.List;
 
 @Mapper
 public interface UserDao {
-    @Select("select id,user_name,phone_number,address from mail_line")
+    @Select("select id,name,phone,address from connect")
     List<User> selectAllUser();
 
-    @Delete("delete from mail_line where id = #{id}")
+    @Delete("delete from connect where id = #{id}")
     int deleteById(Integer id);
 
-    @Update("update mail_line set user_name=#{user_name} , phone_number=#{phone_number} , address=#{address} where id=#{id}")
+    @Update("update connect set name=#{name} , phone=#{phone} , address=#{address} where id=#{id}")
     int updateUser(User user);
 
-    @Select("select id,user_name,phone_number,address from mail_line where id=#{id}")
+    @Select("select id,name,phone,address from connect where id=#{id}")
      User selectById(Integer id);
 
-    @Insert("insert into mail_line(user_name,phone_number,address ) value (#{user_name},#{phone_number},#{address})")
+    @Insert("insert into connect(name,phone,address ) value (#{name},#{phone},#{address})")
     int addUser(User user);
 
-    @Select("select id,user_name,phone_number,address from mail_line where user_name=#{user_name}")
+    @Select("select id,name,phone,address from connect where name=#{name}")
      List<User> selectBySingleInfo(String info);
 
 }

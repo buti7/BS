@@ -2,9 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Insert title here</title>
+    <title>个人通讯录系统</title>
     <style type="text/css">
         ul li {list-style-type: none}
+        body{
+            background-image: url(https://img0.baidu.com/it/u=1199138412,3798556512&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281);
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body>
@@ -13,9 +17,9 @@
     <ul>
         <li><input type="hidden" name="id" th:value="${findUser.id}">
         <li>name:
-        <li><input type="text" name="user_name" th:value="${findUser.user_name}">
+        <li><input type="text" name="name" th:value="${findUser.name}">
         <li>phone:
-        <li><input type="text" name="phone_number" th:value="${findUser.phone_number}">
+        <li><input type="text" name="phone" th:value="${findUser.phone}">
         <li>address:
         <li><input type="text" name="address" th:value="${findUser.address}">
         <li><input type="submit" value="确认">

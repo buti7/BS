@@ -2,9 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Insert title here</title>
+    <title>个人通讯录系统</title>
     <style type="text/css">
         ul li {list-style-type: none}
+        body{
+            background-image: url(https://img2.baidu.com/it/u=2378194771,2509231737&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500);
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body>
@@ -12,9 +16,9 @@
 <form style="border: black" th:action="@{/user/addUser}" method="post">
     <ul>
         <li>name:
-        <li><input type="text" name="user_name">
+        <li><input type="text" name="name">
         <li>phone:
-        <li><input type="text" name="phone_number">
+        <li><input type="text" name="phone">
         <li>address:
         <li><input type="text" name="address">
         <li><input type="submit" value="确认">
